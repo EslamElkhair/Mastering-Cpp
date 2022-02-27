@@ -2,7 +2,6 @@
 Welcome to our **Mastering C++** Series. The Ultimate goal of our Series is to master the most critical skills in programming using the C++ Programming Language and that is the **Practical Edition**. as a plus you can gain advanced knowledge about different topics in programming and that is the **Concepts Edition**. 
 
 ## Mastering C++ (Practical Edition)
-The Skills Edition is a re-mastring for the original series prepared by Dr.Mostafa Saad Ibrahim https://www.udemy.com/course/cpp-4skills
 
 ### Objectives
 
