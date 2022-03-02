@@ -15,7 +15,6 @@ using namespace std;
 
 int main_0() // the compiler start executing the program starting from main function
 {
-
 //Printing
 
 	// output (cout --> console output or character output(<< this operator is used for print output to the console screen)
