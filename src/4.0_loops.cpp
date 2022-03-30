@@ -941,60 +941,64 @@ int main_4() {
 
 //================================================================================================================================================
 
-	// Problem #2 : pair of numbers
+    // Problem #2 : pair of numbers
 
-	/*
-	 Read N, M, SUM. Find all pairs that has
-	 A + B == SUM where
-	 ○ 1 <= A <= N
-	 ○ 1 <= B <= M
+    	/*
+    	 Read N, M, SUM. Find all pairs that has [N,M]
+    	 A + B == SUM where
+    	 ○ 1 <= A <= N
+    	 ○ 1 <= B <= M
 
-	 Try input
-	 1000000 1000000 1000000
-	 */
+    	 Try input
+    	 200 300 70
+    	 1000000 1000000 1000000
+    	 */
 
-	// test case : 200 300 70
+   // test case :
 
-//	int n, m, sum;
-//	cin >> n >> m >> sum;
+//    	int start_range, end_range, sum;
+//    	cin >> start_range >> end_range >> sum;
 //
-//	int cnt = 0;
+//    	int cnt = 0;
 //
-//	for (int i = 1; i <= n; ++i)
-//		for (int j = 1; j <= m; ++j)
-//			if (i + j == sum)
-//				cnt++;
+//    	for (int i = 1; i <= start_range; ++i)   //  [n -> M]   5 -> [10 , 10]
+//    		for (int j = 1; j <= end_range; ++j )
+//    			if (i + j == sum) // pairs 4 1 , pairs 3 2 , pairs 2 3 , pairs 1 4
+//    				cnt++; // 1 2 3 4
 //
-//	cout << cnt << "\n";
+//
+//    	cout << cnt << "\n";   // 4
 
 
-	// test case : 1000000 1000000 1000000
+    //test case : 1000000 1000000 1000000 : more efficient code -> execution time faster ->  more performance software
 
-	//		int n, m, sum;
-	//		cin >> n >> m >> sum;
-	//
-	//			int cnt = 0;
-	//
-	//			for (int i = 1; i <= n; ++i)
-	//			{
-	//				int j =  sum - i;	// i + j == sum
-	//
-	//				if (1 <= j && j <= m)
-	//					cnt++;
-	//
-	//			}
-	//
-	//			cout << cnt << "\n";
+
+//			int start_range, end_range, sum;
+//			cin >> start_range >> end_range >> sum;
+//
+//				int cnt = 0;
+//
+//				for (int i = 1; i <= start_range; ++i)
+//				{
+//					int j =  sum - i;	// i + j == sum   -->  4 , 3  , 2 , 1 ||| , 0 , -1 , ....
+//
+//					if (1 <= j && j <= end_range)
+//						cnt++; // 1 2 3 4
+//
+//				}
+//
+//				cout << cnt << "\n"; // 4
 
 //================================================================================================================================================
 
+
 	// Problem #3 : Triple of numbers
 
-	/*	Read N, M, W. Find all triples that has
-	 A + B <= C where
-	 ○ 1 <= A <= N
-	 ○ A <= B <= M
-	 ○ 1 <= C <= W
+	/*	Read N, M, W. Find all triples that has   i + j <= k
+	 where
+	 ○ 1 <= i <= N
+	 ○ A <= j <= M
+	 ○ 1 <= k <= W
 	 */
 
 	// test case : 3 4 5
@@ -1013,41 +1017,113 @@ int main_4() {
 //	cout << cnt << "\n";
 
 
-
-
-//************************************************ HomeWork 4 :  For Loop medium to hard problems ******************************************
-
+//	test case : 1000000 1000000 100000
+//    	int n, m, w;
+//    	cin >> n >> m >> w;
+//
+//    	int cnt = 0;
+//
+//    	for (int i =1 ;i<=n;++i)
+//    		for(int j=i;j<=m;++j) {
+//
+//    			int k = i+j;
+//
+//    			if(1<=k && k<=w)
+//    				cnt+=w-k+1;
+//    		}
+//
+//    	cout<<cnt<<"\n";
 
 
 //======================================================================================================================
 
-// Problem #2 : Find Special Pairs
-	/*
-	 ● Count How many X, Y numbers such that
-	 ○ X in range [50-300]
-	 ○ Y in range [70-400]
-	 ○ X < Y
-	 ○ (X+Y) divisible by 7
-	 ● Output
-	 ○ 8040
-	 */
+	//Fibonacci Sequence
 
-	/*
-	 int count = 0;
+	//	● A popular math sequence
+	//	○ First 2 numbers: 0 1
+	//	○ Then each number is sum of last 2 numbers:
+	//	■ 0 1 1 2 3 5 8 13 21 34
+	//	● E.g. 13 = 5 + 8
+	//	● E.g. 34 = 13+21
+	//	● Write a code!
 
-	 for (int x = 50; x <= 300; ++x)
-	 {
-	 for (int y = 70; y <= 400; ++y)
-	 {
-	 if (x < y && ((x + y) % 7 == 0))
-	 {
-	 //cout<<x<<" "<<y<<" "<<x+y<<"\n";
-	 ++count;
-	 }
-	 }
-	 }
-	 cout<<count<<"\n";
-	 */
+//Solution 1
+
+//	int n = 10;
+//
+//	int a = 0, b = 1;
+//
+//	cout<<a<<" "<<b<<" ";
+//
+//	for (int cnt = 2; cnt < n; ++cnt) {
+//		int c = a+b;
+//		a = b;
+//		b = c;
+//
+//		cout<<c<<" ";
+//	}
+
+//Solution 2
+//	int n = 10;
+//
+//	for (int a = 0, b = 1, c = -1, cnt = 0; cnt < n; ++cnt, c = a + b, a = b, b = c)
+//		cout << a << " ";
+
+
+
+//************************************************ HomeWork 4 :  For Loop medium to hard problems ******************************************
+//Problem 1: Printing X
+
+//	● Read an Integer N, then print an X using * as following
+//	○ N always odd
+
+//	*   *
+//	 * *
+//	  *
+//	 * *
+//	*   *
+
+//	int n;
+//	cin>>n;
+//
+//	if(n%2==0)
+//		cout<<"evens not allowed";
+//
+//	else{
+//		for (int i = 0; i < n; ++i) {
+//		for (int j = 0; j < n; ++j) {
+//			if(i == j || n-i-1==j )
+//				cout<<"*";
+//			else
+//				cout<<" ";
+//		}
+//		cout<<"\n";
+//	}
+//
+//	}
+
+//======================================================================================================================
+
+	// Problem #2 : Find Special Pairs
+		/*
+		 ● Count How many X, Y numbers such that
+		 ○ X in range [50-300]
+		 ○ Y in range [70-400]
+		 ○ X < Y
+		 ○ (X+Y) divisible by 7
+		 ● Output
+		 ○ 8040
+		 */
+
+//	int cnt=0;
+//
+//	for(int x=50;x<=300;++x)
+//		for(int y=70;y<=400;++y) {
+//			if(x<y && (x+y)%7==0)
+//				++cnt;
+//		}
+//	cout<<cnt;
+
 
 //======================================================================================================================
 //Problem #3 :  Find all quadruples
