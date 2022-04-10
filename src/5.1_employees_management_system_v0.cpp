@@ -9,7 +9,7 @@
 using namespace std;
 
 
-int main () {
+int main_5_1 () {
 	//******************************************************************** Homework 3 : Employee Program ************************************************************************
 		/*
 		 Help our factory in managing his employees. Create a program that does the following:
