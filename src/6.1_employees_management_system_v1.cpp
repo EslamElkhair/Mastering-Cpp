@@ -31,8 +31,8 @@ following:
 ○ Find the employee and update his salary
 */
 
-/*
 
+/*
 const int MAX=100; //Max number of employees
 
 string names[MAX];
@@ -136,7 +136,6 @@ void employee_system() {
 			break;
 	}
 }
-*/
 
 int main_6_1() {
 
@@ -145,4 +144,5 @@ int main_6_1() {
 	return 0;
 
 }
+*/
 

@@ -12,7 +12,7 @@ using namespace std;
 
 //************************************************************** Structures 1 ******************************************************
 /*// Recall the Employee System : Each Employee has Name , Age , Salary , Gender
-//so We have to define 4 Arrays a below
+//so We have to define 4 Arrays as below
  * const int Max = 1000;
  * string Name [Max]
  * int ages[Max]
@@ -55,12 +55,11 @@ void print_employee(){
 		cout<<employee_arr[i].gender<<endl;
 	}
 }
- *
- *
- */
+
+*/
 
 
-//************************************************************** Structures 1 ******************************************************
+//************************************************************** Structures 2 ******************************************************
 
 //we can use functions inside struct
 
@@ -102,7 +101,11 @@ void print_employees()
 		employee_arr[i].print_employee();
 	cout<<"---------------------------------------"<<endl;
 }
+*/
 
+//_________________________________________________________________
+
+/*
 //We can compare functions with struct parameters
 bool compare_name ( employee &a , employee &b)
 {
@@ -120,9 +123,12 @@ bool compare_name_salary(employee &a , employee &b)
 
 	return a.salary<b.salary;
 }
+*/
 
+
+//_________________________________________________________________
 //Structure of Structure of Structure ....
-struct full_name{
+/*struct full_name{
 
 	string full_name;
 
@@ -132,8 +138,9 @@ struct full_name{
 		getline(cin, full_name);
 	}
 
-};
+};*/
 
+/*
 struct __employee{
 	full_name emp_name;
 	int age ;
@@ -247,12 +254,63 @@ bool cmp(int x, int y) {
 }
 */
 
+//________________________________________________
+/*
+struct Address {
+	string street_name;
+	int building_number = -1;
+	int apartment_number = -1;
 
-int main() {
+	Address() {}
+	Address(string street_name_, int building_number_, int apartment_number_) {
+		street_name = street_name_, building_number = building_number_;
+		apartment_number = apartment_number_;
+	}
+};
+
+struct Stduent {
+	string name;
+	int id = -1;
+	Address address;
+
+	Stduent() {}
+	Stduent(string name_, int id_, Address address_) {
+		name = name_, id = id_, address = address_;
+	}
+
+	void print() {
+		cout << name << " " << id << " " << address.street_name
+				<< " " << address.building_number << " "
+				<< address.apartment_number << "\n";
+	}
+};
+
+bool cmp_Address(Address& first, Address& second) {
+	if (first.street_name != second.street_name)
+		return first.street_name < second.street_name;
+
+	if (first.building_number != second.building_number)
+		return first.building_number < second.building_number;
+
+	return first.apartment_number < second.apartment_number;
+}
+
+bool cmp_Student(Stduent& first, Stduent& second) {
+	if (first.name != second.name)
+		return first.name < second.name;
+
+	if (first.id != second.id)
+		return first.id < second.id;
+
+	return cmp_Address(first.address, second.address);
+}
+*/
+
+int main_8_0() {
 
 //Using Functions inside Structures
 /*
- * employee_arr[added++].read_employee();
+ employee_arr[added++].read_employee();
 print_employees();
 cout<<"Added = "<<added<<endl;
 
@@ -263,9 +321,9 @@ print_employees();
 cout<<"Added = "<<added<<endl;
 
 cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
- *
- *
- */
+*/
+
+
 
 //Compare : We can write functions that compare structs
 /*
