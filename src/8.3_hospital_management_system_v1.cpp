@@ -1,3 +1,25 @@
+//Description
+/*
+● we now have a new way of thinking which is structures that will collect Member's data
+  and the relevant functionalities in one struct.
+
+● So, We will take the hospital system one step forward with the structures to collect variables
+  and member functions that are very relevant together.
+
+● Let’s create hospital_queue struct :
+			○ Variables
+			○ string names[MAX_QUEUE];
+			○ int status[MAX_QUEUE];
+			○ int len;7
+			○ int spec;
+			○ Provide same functionalities
+
+● Let’s create hospital_system struct :
+			○ hospital_queue queues[MAX_SPECIALIZATION];
+			○ Add the methods inside it using the hospital_queue change
+ */
+
+
 /*#include <iostream>
 #include<algorithm>
 #include<string>
