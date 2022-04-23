@@ -605,7 +605,7 @@ struct library_system {
 
 };
 
-int main() {
+int main_8_4() {
 	library_system library;
 	library.run();
 
