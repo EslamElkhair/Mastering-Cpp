@@ -117,6 +117,9 @@
  ● Note
  ○ Anytime we try to list the system books, overall data should be correct and proper
  */
+//___________________________________________________________________________
+
+/*
 
 #include <iostream>
 #include <algorithm>
@@ -167,8 +170,7 @@ struct book {
 		if (substring.size() > book_name.size()) // prefix name greater than book name
 			return false;
 
-		for (int i = 0; i < (int) book_name.size() - (int) substring.size() + 1;
-				i++) {
+		for (int i = 0; i < (int) book_name.size() - (int) substring.size() + 1;i++) {
 
 			bool is_match = true;
 
@@ -327,11 +329,11 @@ struct library_system {
 			int user_choice = user_menu();
 
 			if (user_choice == 1)
-				search_books();
-			else if (user_choice == 2)
 				borrow_book();
-			else if (user_choice == 3)
+			else if (user_choice == 2)
 				return_book();
+			else if (user_choice == 3)
+				search_books();
 			else if (user_choice == 4) {
 				run();
 				main_choice = 3;
@@ -414,7 +416,7 @@ struct library_system {
 
 	void search_books() {
 
-		//test case: algorithms -> prefix :algo
+substring		//test case: algorithms -> prefix :algo
 		cout << "\nEnter book name :";
 		string substring;
 		cin >> substring;
@@ -605,11 +607,13 @@ struct library_system {
 
 };
 
-int main_8_4() {
+int main() {
 	library_system library;
 	library.run();
 
 	return 0;
 
 }
+
+*/
 

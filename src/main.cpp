@@ -1,13 +1,11 @@
-#include <iostream>
-#include<fstream>
-#include<sstream>
-#include <algorithm>
-#include<cmath>
+#include<iostream>
 using namespace std;
 
 
-int main (int argc, char **argv) {
 
+int main__________()  {
+
+	cout<<"Main File";
 
 
 	return 0;
